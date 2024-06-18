@@ -22,5 +22,15 @@ const images = [
   {
     url: "https://cdn.pixabay.com/photo/2019/05/17/04/35/lighthouse-4208843_1280.jpg",
     alt: "Lighthouse Coast Sea",
-  }
+  },
 ];
+
+const kakayato = images
+  .map(
+    (element) =>
+      `<li><img alt=${element.alt} src=${element.url} class='item'></li>`
+  )
+  .join("");
+console.log(kakayato);
+const listRef = document.querySelector(".gallery");
+listRef.insertAdjacentHTML("afterbegin", kakayato);
