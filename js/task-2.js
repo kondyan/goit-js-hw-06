@@ -24,13 +24,11 @@ const images = [
     alt: "Lighthouse Coast Sea",
   },
 ];
+const kaknibud = ({ alt, url }) =>
+  `<li><img alt=${alt} src=${url} class='item'></li>`;
 
-const kakayato = images
-  .map(
-    (element) =>
-      `<li><img alt=${element.alt} src=${element.url} class='item'></li>`
-  )
-  .join("");
+const kakayato = images.map(kaknibud).join("");
 console.log(kakayato);
+
 const listRef = document.querySelector(".gallery");
 listRef.insertAdjacentHTML("afterbegin", kakayato);
