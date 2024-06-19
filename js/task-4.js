@@ -6,7 +6,6 @@ const callback = (ev) => {
   const form = ev.target;
   const login = form.elements.email.value;
   const password = form.elements.password.value;
-
   if (login === "" || password === "") {
     return console.log("Please fill in all the fields!");
   }
