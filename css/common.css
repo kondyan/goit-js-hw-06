@@ -26,3 +26,8 @@ ul {
 .item {
   width: 550px;
 }
+
+#boxes {
+  display: flex;
+  flex-wrap: wrap;
+}
